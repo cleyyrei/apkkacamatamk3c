@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #252525;
+}
+
+header {
+    position: fixed; /* Header tetap saat di-scroll */
+    top: 0;
+    width: 100%;
+    height: 80px; /* Tentukan tinggi header */
+    background-color: #fff;
+    z-index: 100%; /* Header berada di atas elemen lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo img {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    margin-right: 50px;
+    transition: all .55s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .search-icon {
+        width: 16px;
+    }
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.collection h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.product-item {
+    text-align: center;
+    width: 100%; /* Pastikan item produk tidak memenuhi lebih dari 100% kontainer */
+    max-width: 200px; /* Batas maksimal untuk elemen produk */
+    margin: 0 auto; /* Buat elemen berada di tengah */
+}
+
+.product-image img {
+    max-width: 80%; /* Mengatur maksimal lebar gambar */
+    height: auto;   /* Menjaga proporsi gambar */
+    margin-bottom: 10px;
+}
+
+.product-image p {
+    font-size: 16px; /* Ukuran teks harga dan nama produk */
+    margin-top: 5px;
+    color: #252525;
+    text-align: center;
+}
+
+.model-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+    margin-top: 80px; /* To make space for the fixed header */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hero-img {
+    width: 80%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.collection {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.collection h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 40px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi jadi 3 kolom */
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    display: flex; /* Menggunakan Flexbox untuk membuat kolom berjejer */
+    justify-content: space-between; /* Mengatur jarak antar kolom */
+    flex-wrap: wrap; /* Agar tetap responsif dan kolom turun ke bawah di layar kecil */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Setiap kolom memiliki lebar minimal 200px dan dapat melebar */
+    margin: 20px;
+    min-width: 250px; /* Memberikan lebar minimal agar terlihat baik */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-column ul li a:hover {
+    color: #333;
+}
+
+.copyright{
+    background-color: transparent;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Pada layar kecil, kolom akan disusun secara vertikal */
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-column ul li a {
+        font-size: 14px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-image img, .model-image img {
+        max-width: 100%; /* Lebar penuh untuk layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image, .model-image {
+        max-width: 150px; /* Ukuran lebih kecil untuk layar sangat kecil */
+    }
+
+    .product-image p {
+        font-size: 14px; /* Ukuran teks lebih kecil di layar kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .product-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-item {
+        width: 45%; /* Lebar 45% untuk layar lebih kecil */
+        max-width: none; /* Hapus batasan maksimal untuk tampilan mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 90%; /* Lebar hampir penuh untuk layar sangat kecil */
+    }
+}
